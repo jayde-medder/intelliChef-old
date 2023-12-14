@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+  --tahuna-sands: #fff0ce;
+  --olivine: #80bb77;
+  --calico: #dcc184;
+  --royal-health: #b43969;
+  --bleached-cedar: #261b32;
+}
+
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0px;
+  text-decoration: none;
+  font: 14px Neucha, Helvetica, Arial, sans-serif;
+}
+
+h2{
+  font-family: 'Itim';
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  margin-left: -100px;
+}
