@@ -1,8 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
 .header{
-  height: 80px;
+  background-color: var(--jade);
+  font-family: 'Fascinate';
+  font-size: 40px;
+  color: var(--raw-umber);
+  height: auto;
+  width: 20vw;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.header .content{
+  height: 90vh;
+  position: sticky;
+  top: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .img-wrapper{
+  display:flex;
+  justify-content: center;
+  width: 18vw;
+  padding: 10px;
 }
 
 .header img{
-  height: 120px;
-  margin: -10px 10px;
+  height: 18vw;
+  max-height: 150px;
+}
+
+.header img:hover{
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+
+.icon{
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  background-color: var(--fuchsia);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }

@@ -2,10 +2,6 @@
   margin: 10px;
 }
 
-.kitchen-builder h2{
-  margin-bottom: 10px;
-}
-
 .kitchen-builder label{
   position: absolute;
   width: 1px;
@@ -18,9 +14,9 @@
 }
 
 .kitchen-builder input{
-  font-family: Neucha;
-  border: 2px dashed rgb(128, 187, 119);
-  border-radius: 20px;
+  font-family: 'Inconsolata';
+  border: 2px dashed var(--gunmetal);
+  border-radius: 5px;
   height: 20px;
   font-size: 18px;
   margin: 10px 0;
@@ -39,7 +35,7 @@
 .item-box{
   background-color: rgba(255, 255, 255, 0.8);
   font-size: large;
-  border: 1px dashed black;
+  border: 1px dashed var(--gunmetal);
   width:fit-content;
   height: fit-content;
   margin: 10px 0 0 10px;
@@ -64,21 +60,14 @@
 }
 
 .kitchen-box{
-  background-color: var(--tahuna-sands);
-  background-image: url('/images/img.png');
   background-size: 100%;
   opacity: 1;
   margin: 20px 0;
-  padding: 20px;
-  border: 2px solid var(--bleached-cedar);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  min-height: calc(fit-content + 100px);
-  width: 55vh;
+  border: 1.5px solid var(--gunmetal);
+  border-radius: 10px;
+  width: auto;
+  min-height: fit-content;
   height: 45vh;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 235px 15px;
-  border-top-right-radius: 255px 5px;
 }
 
 .kitchen-items{

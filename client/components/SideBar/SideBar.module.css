@@ -1,38 +1,29 @@
 /* Side Bar */
 
 .sidebar-container {
+  width:fit-content;
+  z-index: 11;
   display: flex;
   position: fixed;
   top: 0;
   right: 0;
-  margin: 5px;
-  background-color: var(--tahuna-sands);
+  background-color: var(--fuchsia);
   background-image: none;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: var(--bleached-cedar);
   display: inline-block;
   font-family: Neucha, sans-serif;
   outline: none;
-  padding: 0.75rem;
   text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
 }
 
 .sidebar {
   color: var(--bleached-cedar);
   height: 100vh;
-  width: 300px;
+  width: 200px;
   transition: width 0.5s;
   border-radius: 10px;
   margin: 5px;
@@ -52,10 +43,9 @@
 .sidebar .link,
 .sidebar .link-close {
   display: flex;
-  color: var(--bleached-cedar);
+  color: black;
   padding: 15px 10px;
   gap: 30px;
-  transition: all 0.5s;
   text-decoration: none;
 }
 
@@ -65,38 +55,12 @@
 }
 
 .sidebar .link:hover {
-  width: 250px;
 }
 
 .sidebar .link:hover,
 .sidebar .link-close:hover {
   color: var(--royal-health);
-  background-color: white;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
-  box-sizing: border-box;
-  color: var(--olivine);
   cursor: pointer;
-  font-family: Neucha, sans-serif;
-  font-size: 1rem;
-  line-height: 10px;
-  outline: none;
-  padding: 0.75rem;
-  text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  -webkit-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
 }
 
 .sidebar .authentication {
@@ -117,44 +81,34 @@
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: var(--bleached-cedar);
+  color: black;
   cursor: pointer;
   display: inline-block;
-  font-family: Neucha, sans-serif;
+  font-family: 'Inconsolata';
   font-size: 1rem;
   line-height: 11px;
   outline: none;
   padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
   -webkit-user-select: none;
   user-select: none;
   touch-action: manipulation;
 }
 
 .sidebar .login-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
 }
 
 .sidebar .login-button:focus {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 
 .recipe-list {
   margin: 5px;
   border-radius: 5px;
   padding: 5px;
-
   width: 240px;
   height: auto;
   background-color: white;
@@ -162,22 +116,15 @@
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: var(--bleached-cedar);
   display: inline-block;
-  font-family: Neucha, sans-serif;
+  font-family: 'Inconsolata', sans-serif;
   outline: none;
   padding: 0.75rem;
   text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
 }
 
 .recipe-list ul {

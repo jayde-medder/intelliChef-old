@@ -1,10 +1,26 @@
 import styles from './Header.module.css'
 
+import { RecipesIcon, LoginIcon } from '../Icons.tsx'
+
 function Header() {
   return (
-    <div className={styles.header}>
-      <img src="/images/logo2.png" alt="intelliChef logo"></img>
-    </div>
+    <>
+      <div className={styles.header}>
+        <div className={styles.content}>
+          <div className={styles['img-wrapper']}>
+            <img src="/images/logo1.png" alt="intelliChef logo"></img>
+          </div>
+          <div className={styles['icons-container']}>
+            <div className={styles.icon}>
+              <RecipesIcon />
+            </div>
+            <div className={styles.icon}>
+              <LoginIcon />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 

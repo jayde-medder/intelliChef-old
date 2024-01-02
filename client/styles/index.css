@@ -1,30 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Fascinate&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --tahuna-sands: #fff0ce;
-  --olivine: #80bb77;
-  --calico: #dcc184;
-  --royal-health: #b43969;
-  --bleached-cedar: #261b32;
+  --back-gray: #efefef;
+  --linen: #FFEDE1;
+  --raw-umber: #8C6039;
+  --fuchsia: #F038FF;
+  --jade: #00a878;
+  --gunmetal: #272d2d;
 }
 
 body {
+  background-color: var(--back-gray);
   top: 0;
   left: 0;
   margin: 0;
   padding: 0px;
   text-decoration: none;
-  font: 14px Neucha, Helvetica, Arial, sans-serif;
+  font: 14px 'Inconsolata', Helvetica, Arial, sans-serif;
 }
 
 h2{
-  font-family: 'Itim';
-  font-size: 25px;
+  font-family: 'Bodoni Moda';
+  transform: scale(1, 1.1);
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  font-size: 24px;
   margin-bottom: 20px;
+  color: var(--gunmetal)
 }
 
 .main{
   display: flex;
+}
+
+.app{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-left: -100px;
+  z-index: 7;
+}
+
+.container{
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(255, 123, 0, 0.02) 0px 1px 3px 0px, rgba(59, 33, 28, 0.15) 0px 0px 0px 1px;
+
 }

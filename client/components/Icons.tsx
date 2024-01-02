@@ -1,8 +1,8 @@
 export const RecipesIcon = () => {
   return (
     <svg
-      width="40px"
-      height="40px"
+      width="28px"
+      height="28px"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +56,8 @@ export const PlusIcon = () => {
   return (
     <div>
       <svg
-        width="40px"
-        height="40px"
+        width="30px"
+        height="30px"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -75,8 +75,8 @@ export const PlusIcon = () => {
 export const FridgeIcon = () => {
   return (
     <svg
-      width="40px"
-      height="40px"
+      width="30px"
+      height="30px"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +112,8 @@ export const FridgeIcon = () => {
 export const XIcon = () => {
   return (
     <svg
-      width="40px"
-      height="40px"
+      width="30px"
+      height="30px"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -154,8 +154,8 @@ export const MenuBar = () => {
   return (
     <svg
       fill="#000000"
-      width="40px"
-      height="40px"
+      width="30px"
+      height="30px"
       viewBox="-2.5 0 19 19"
       xmlns="http://www.w3.org/2000/svg"
       className="cf-icon-svg"
@@ -197,8 +197,8 @@ export const KitchenIcon = () => {
   return (
     <svg
       fill="#000000"
-      width="40px"
-      height="40px"
+      width="30px"
+      height="30px"
       viewBox="0 0 100 100"
       version="1.1"
       stroke="#000000"
@@ -301,5 +301,27 @@ export const Cooking = () => {
 
       <line className="b" x1="29.8248" y1="14.8949" x2="32.0506" y2="17.5954" />
     </svg>
+  )
+}
+
+export const LoginIcon = () => {
+  return (
+    <div>
+      <svg
+        width="30px"
+        height="30px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 17C6 17.93 6 18.395 6.10222 18.7765C6.37962 19.8117 7.18827 20.6204 8.22354 20.8978C8.60504 21 9.07003 21 10 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H10C9.07003 3 8.60504 3 8.22354 3.10222C7.18827 3.37962 6.37962 4.18827 6.10222 5.22354C6 5.60504 6 6.07003 6 7M12 8L16 12M16 12L12 16M16 12H3"
+          stroke="#000000"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
   )
 }

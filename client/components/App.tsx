@@ -6,12 +6,20 @@ import Header from './Header/Header'
 function App() {
   return (
     <>
-      <Header />
-      <SideBar />
       <section className="main">
-        <div>
-          <KitchenBuilder />
-          <RecipeGenerator />
+        <Header />
+        <div className="app">
+          <div className="container">
+            <h1>Welcome to IntelliChef</h1>
+            <p>
+              IntelliChef uses the ChatGPT API to turn the ingredients from your
+              kitchen into recipes. Enter your ingredients below!
+            </p>
+          </div>
+          <div className="container">
+            <KitchenBuilder />
+            <RecipeGenerator />
+          </div>
         </div>
       </section>
     </>
