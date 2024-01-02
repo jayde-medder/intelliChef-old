@@ -33,5 +33,28 @@
 
 }
 
-.button:focus {
+.generated-list{
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0px;
+}
+
+.generated-list li{
+  list-style: none;
+}
+
+.generated-recipe{
+  background-color: white;
+  color: black;
+  margin: 20px 40px;
+  padding: 20px;
+  border: 1.5px solid var(--fuchsia);
+  border-radius: 5px;
+}
+
+.link{
+  text-decoration: none;
 }

@@ -111,8 +111,7 @@ function RecipeGenerator() {
         </button>
       </div>
       <div>
-        <h3>Chat GPT : </h3>
-        <ul>
+        <ul className={styles['generated-list']}>
           {!ingredients || ingredients.length === 0 ? (
             <p>
               No ingredients selected. Please add at least one item on the
@@ -124,14 +123,16 @@ function RecipeGenerator() {
             recipeList.map((recipe) => (
               <li key={recipe.dish_name}>
                 <Link
+                  className={styles.link}
                   to={`/recipe`}
                   state={{ recipeList, selectedRecipe: recipe }}
                 >
-                  <strong>{recipe.dish_name}</strong>
+                  <div className={styles['generated-recipe']}>
+                    <strong>{recipe.dish_name}</strong>
+                    <p>Preparation Time: {recipe.preparation_time}</p>
+                    <p>Ingredients: {recipe.ingredients}</p>
+                  </div>
                 </Link>
-                <p>Preparation Time: {recipe.preparation_time}</p>
-                <p>Ingredients: {recipe.ingredients}</p>
-                <hr />
               </li>
             ))
           ) : (
