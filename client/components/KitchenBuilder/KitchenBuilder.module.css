@@ -14,8 +14,9 @@
 }
 
 .kitchen-builder input{
-  font-family: 'Inconsolata';
-  border: 2px dashed var(--gunmetal);
+  font-family: 'Space Grotesk';
+  border: 2px solid var(--gunmetal);
+  box-shadow: 0px 4px var(--gunmetal);
   border-radius: 5px;
   height: 20px;
   font-size: 18px;
@@ -25,17 +26,21 @@
 
 .kitchen-builder input:focus{
   outline: none;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  color: var(--gunmetal);
+  border: 2px solid var(--jade);
+  box-shadow: 0px 4px var(--jade),  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .kitchen-builder input:hover{
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border: 2px solid var(--jade);
+  box-shadow: 0px 4px var(--jade),  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .item-box{
   background-color: rgba(255, 255, 255, 0.8);
   font-size: large;
-  border: 1px dashed var(--gunmetal);
+  border: 2px dashed var(--gunmetal);
+  border-radius: 5px;
   width:fit-content;
   height: fit-content;
   margin: 10px 0 0 10px;
@@ -44,7 +49,7 @@
 }
 
 .item-box:hover{
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.2) 0px 1px 2px 0px, rgba(60, 64, 67, 0.1) 0px 2px 6px 2px;
 }
 
 .item-box button{
@@ -63,8 +68,9 @@
   background-size: 100%;
   opacity: 1;
   margin: 20px 0;
-  border: 1.5px solid var(--gunmetal);
-  border-radius: 10px;
+  border: 2px solid var(--gunmetal);
+  box-shadow: 0px 4px var(--gunmetal);
+  border-radius: 5px;
   width: auto;
   min-height: fit-content;
   height: 45vh;

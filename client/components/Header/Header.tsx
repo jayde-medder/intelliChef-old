@@ -13,9 +13,11 @@ function Header() {
           <div className={styles['icons-container']}>
             <div className={styles.icon}>
               <RecipesIcon />
+              <span className={styles['tooltip-text']}>Saved Recipes</span>
             </div>
             <div className={styles.icon}>
               <LoginIcon />
+              <span className={styles['tooltip-text']}>Log In</span>
             </div>
           </div>
         </div>

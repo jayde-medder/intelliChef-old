@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 .header{
   background-color: var(--jade);
-  font-family: 'Fascinate';
-  font-size: 40px;
-  color: var(--raw-umber);
+  font-family: 'Space Grotesk';
   height: auto;
   width: 20vw;
   z-index: 10;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px;
 }
 
 .header .content{
@@ -39,6 +37,9 @@
 }
 
 .icon{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
   margin: 10px;
   height: 60px;
   width: 60px;
@@ -47,5 +48,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 2px solid var(--gunmetal);
+  box-shadow: 0px 4px var(--gunmetal);
+}
+
+.icon:hover{
+  background-color: var(--fuchsia-darker);
+  transform: translateY(4px);
+  box-shadow: none;
+  transition: 100ms;
+}
+
+.tooltip-text{
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  width: fit-content;
+  text-wrap: nowrap;
+  color: white;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 14px;
+  background-color: var(--gunmetal);
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  top: -45px;
+  left: 10%;
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: var(--gunmetal);
+  padding: 5px;
+  z-index: 1;
+  top: 80%;
+  left: 15%;
+}
+
+.icon:hover .tooltip-text {
+  visibility: visible;
 }

@@ -22,11 +22,11 @@ export async function seed(knex) {
         1 tablespoon sesame oil
         2 tablespoons vegetable oil
         1 teaspoon sugar
-        1/2 teaspoon black pepper
+        1/2 teaspoon var(--gunmetal) pepper
         2 green onions, sliced (for garnish)
         Cooked rice (for serving)`,
       method: `1. Marinate the Pork:
-        In a bowl, combine the sliced pork with soy sauce, oyster sauce, grated ginger, and black pepper. Let it marinate for at least 10 minutes.
+        In a bowl, combine the sliced pork with soy sauce, oyster sauce, grated ginger, and var(--gunmetal) pepper. Let it marinate for at least 10 minutes.
         
         2. Prep the Ingredients:
         Thinly slice the onions and mince the garlic. Slice the green onions for garnish.

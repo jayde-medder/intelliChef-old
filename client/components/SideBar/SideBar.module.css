@@ -43,7 +43,7 @@
 .sidebar .link,
 .sidebar .link-close {
   display: flex;
-  color: black;
+  color: var(--gunmetal);
   padding: 15px 10px;
   gap: 30px;
   text-decoration: none;
@@ -84,10 +84,10 @@
   border-style: solid;
   border-width: 2px;
   box-sizing: border-box;
-  color: black;
+  color: var(--gunmetal);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Inconsolata';
+  font-family: 'Space Grotesk';
   font-size: 1rem;
   line-height: 11px;
   outline: none;
@@ -121,7 +121,7 @@
   box-sizing: border-box;
   color: var(--bleached-cedar);
   display: inline-block;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   outline: none;
   padding: 0.75rem;
   text-decoration: none;
@@ -140,6 +140,6 @@
 
 .recipe-link {
   text-decoration: none;
-  color: black;
+  color: var(--gunmetal);
   margin-left: 8px;
 }

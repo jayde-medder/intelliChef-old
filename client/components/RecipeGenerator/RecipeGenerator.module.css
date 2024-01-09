@@ -15,30 +15,32 @@
 }
 
 .button {
+  transform: translateY(-4px);
   align-self: center;
-  background-color: white;
-  color: var(--jade);
-  border: 2px solid var(--jade);
+  background-color: var(--jade);
+  color: white;
+  border: 2px solid var(--gunmetal);
+  box-shadow: 0px 4px var(--gunmetal);
   border-radius: 5px;
   margin: 0 20px;
   line-height: 1rem;
   cursor: pointer;
-  font-family: 'Inconsolata';
+  font-family: 'Space Grotesk';
   font-size: 1rem;
   padding: 0.75rem;
 }
 
 .button:hover {
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
+  background-color: var(--fuchsia-darker);
+  transform: translateY(0px);
+  box-shadow: none;
+  transition: 100ms;
 }
 
 .generated-list{
-  background-color: rgb(243, 243, 243);
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   font-size: 18px;
-  padding: 10px;
+  padding: 0px;
   margin: 0px;
 }
 
@@ -48,11 +50,18 @@
 
 .generated-recipe{
   background-color: white;
-  color: black;
-  margin: 20px 40px;
+  color: var(--gunmetal);
+  margin: 20px 0px;
   padding: 20px;
-  border: 1.5px solid var(--fuchsia);
+  border: 2px solid var(--jade);
+  box-shadow: 0px 4px var(--jade);
   border-radius: 5px;
+}
+
+.generated-recipe:hover{
+  transform: translateY(4px);
+  box-shadow: none;
+  transition: 100ms;
 }
 
 .link{
