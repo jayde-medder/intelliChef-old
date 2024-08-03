@@ -46,7 +46,7 @@ function RecipeGenerator() {
       ingredientsList = ingredients
         .map((ingredient) => ingredient.item_name)
         .join(', ')
-      const prompt = `From now you when you respond you will only provide a codeblock with json and nothing else. You will consider this list of ingredients: ${ingredientsList} and provide a maximum of 3 recipes containing ONLY the ingredients specific and absolutely no additional ingredients. The json will have the following properties: dish_name, preparation_time, cooking_time, servings, ingredients and method. Please store each step of method as a string array. Remember you must provide only a codeblock containing json, absolutely no additional text.`
+      const prompt = `From now when you respond you will only provide a codeblock with json and nothing else. You will consider this list of ingredients: ${ingredientsList} and provide a maximum of 3 recipes containing ONLY the ingredients specific and absolutely no additional ingredients. The json will have the following properties: dish_name, preparation_time, cooking_time, servings, ingredients and method. Please store each step of method as a string array. Remember you must provide only a codeblock containing json, absolutely no additional text.`
 
       const options = {
         method: 'POST',
@@ -58,21 +58,16 @@ function RecipeGenerator() {
         },
       }
 
-      const response = await fetch(
-        'https://intelli-chef.devacademy.nz/completions',
-        options
-      )
-
+      const response = await fetch('http://localhost:3000/completions', options)
       if (!response.ok) {
         throw new Error(`Server responded with status: ${response.status}`)
       }
 
       const data = await response.json()
+      console.log(data.recipes[0])
 
-      if (data.choices && data.choices.length > 0) {
-        const stringValue1: string = data.choices[0].message['content']
-        const refinedData = stringValue1.replace(/\\|\n|`|json|/g, '')
-        const jsonArray = JSON.parse(refinedData)
+      if (data.recipes && data.recipes.length > 0) {
+        const jsonArray = data.recipes
         for (let i = 0; i < jsonArray.length; i++) {
           jsonArray[i].ingredients = Array.isArray(jsonArray[i].ingredients)
             ? jsonArray[i].ingredients.join(', ')

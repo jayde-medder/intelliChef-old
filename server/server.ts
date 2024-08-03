@@ -6,15 +6,26 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 
+import OpenAI from 'openai'
+
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   const envConfig = dotenv.config()
   if (envConfig.error) throw envConfig.error
 }
-const apiChatKey = process.env.CHAT_API_KEY
+const apiKey = process.env.OPENAI_API_KEY
+if (!apiKey) {
+  throw new Error(
+    'API key is missing. Please set the OPENAI_API_KEY environment variable.'
+  )
+}
 
 const server = express()
 server.use(express.json())
 server.use(cors())
+
+const openai = new OpenAI({
+  apiKey: apiKey,
+})
 
 server.use('/api/v1/ingredients', ingredientRoutes)
 server.use('/api/v1/recipes', recipesRoutes)
@@ -29,27 +40,21 @@ if (process.env.NODE_ENV === 'production') {
 
 //for connecting Chat GPT API
 server.post('/completions', async (req, res) => {
-  const options = {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiChatKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'gpt-4',
-      messages: [{ role: 'user', content: req.body.message }],
-      max_tokens: 1000,
-    }),
-  }
   try {
-    const response = await fetch(
-      'https://api.openai.com/v1/chat/completions',
-      options
-    )
-    const data = await response.json()
-    console.log('OpenAI API Response:', data)
-    res.send(data)
+    const completion = await openai.chat.completions.create({
+      messages: [
+        {
+          role: 'system',
+          content: 'You are a helpful assistant designed to output JSON.',
+        },
+        { role: 'user', content: req.body.message },
+      ],
+      model: 'gpt-4o-mini',
+      response_format: { type: 'json_object' },
+    })
+    res.send(completion.choices[0].message.content)
   } catch (error) {
+    console.error('Error communicating with OpenAI API:', error)
     res.status(500).json({ message: 'Error communicating with OpenAI API' })
   }
 })
