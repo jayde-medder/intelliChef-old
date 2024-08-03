@@ -4,11 +4,11 @@ import { IfAuthenticated, IfNotAuthenticated } from '../Authenticated.tsx'
 import { useLocation, useNavigate, Link } from 'react-router-dom'
 import RecipeViewer from '../ViewRecipe/RecipeViewer'
 import { useRecipe } from '../../hooks/useRecipe.ts'
-import styles from './RecipeGenerator.module.css'
+import styles from './Recipe.module.css'
 import { RecipeData } from '../../../models/recipes.ts'
 import ErrorMessage from '../Error/ErrorMessage.tsx'
 
-const RecipeCard = () => {
+const Recipe = () => {
   const { user } = useAuth0()
   const { state } = useLocation()
   const { recipeList, selectedRecipe } = state
@@ -46,7 +46,7 @@ const RecipeCard = () => {
   }
 
   return (
-    <>
+    <div className={styles['recipe-page']}>
       <div className={styles['recipe-nav']}>
         <IfAuthenticated>
           <button className={styles['button']} onClick={() => handleSave()}>
@@ -61,8 +61,8 @@ const RecipeCard = () => {
         </Link>
       </div>
       <RecipeViewer recipe={selectedRecipe} />
-    </>
+    </div>
   )
 }
 
-export default RecipeCard
+export default Recipe

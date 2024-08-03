@@ -1,7 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
 import ErrorMessage from '../Error/ErrorMessage'
-import Header from '../Header/Header'
-import SideBar from '../SideBar/SideBar'
 import { getRecipes } from '../../apis/recipes'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Link, useNavigate } from 'react-router-dom'
@@ -45,8 +43,6 @@ const ManageMyRecipes = () => {
 
   return (
     <div className={styles['manage-body']}>
-      <Header />
-      <SideBar />
       <div className={styles['manage-container']}>
         {foundRecipes.map((recipe) => (
           <div key={recipe.id} className={styles['manage-box']}>

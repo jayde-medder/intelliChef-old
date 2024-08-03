@@ -1,53 +1,28 @@
 /* /SavedRecipeCard/:id */
 .recipe-container {
-  max-width: 100%;
-  margin: 10px;
-  background-color: white;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border: 2px dashed var(--calico);
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 20px 38px 25px -18px;
-  box-sizing: border-box;
-  color: var(--bleached-cedar);
-  display: inline-block;
-  font-family: Neucha, sans-serif;
-  outline: none;
-  padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
+  background-color: white;
+  color: var(--gunmetal);
+  border: 2px solid var(--jade);
+  box-shadow: 0px 4px var(--jade);
+  border-radius: 5px;
 }
 
 .recipe {
-  padding: 1.2em;
+  padding: 50px;
 }
 
 
 .dish-name {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   width: fit-content;
   outline: none;
-  color: var(--royal-health);
-  padding: 0.8em;
   border: 2px dashed var(--calico);
   border-radius: 4px;
   background-color: var(--tahuna-sands);
   box-shadow: 0 0 0 4px var(--tahuna-sands), 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-  transition: 0.1s ease-in-out, 0.4s color;
-}
-
-.dish-name:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
 }
 
 .dish-name:focus {
@@ -84,7 +59,6 @@ p {
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
@@ -99,10 +73,6 @@ p {
   padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
   -webkit-user-select: none;
   user-select: none;
   touch-action: manipulation;

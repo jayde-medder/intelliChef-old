@@ -7,12 +7,7 @@
   justify-content: space-between;
 }
 
-.recipe-nav{
-  max-width: 100%;
-  margin: 10px 30px 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .button {
   transform: translateY(-4px);
