@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './ManageMyRecipes.module.css'
 import { useRecipe } from '../../hooks/useRecipe'
+import Loader from '../Loading/Loading'
 
 const ManageMyRecipes = () => {
   const { user } = useAuth0()
@@ -22,7 +23,7 @@ const ManageMyRecipes = () => {
   )
 
   if (isError) {
-    const message = `Sorry, We can't read your recipes`
+    const message = `An error occurred while fetching your recipes`
 
     return (
       <>
@@ -32,7 +33,7 @@ const ManageMyRecipes = () => {
   }
 
   if (!foundRecipes || isLoading) {
-    return <p>...loading</p>
+    return <Loader />
   }
 
   const handleDelete = (id: number) => {
@@ -43,27 +44,24 @@ const ManageMyRecipes = () => {
 
   return (
     <div className={styles['manage-body']}>
+      <h2>Manage My Saved Recipes</h2>
       <div className={styles['manage-container']}>
         {foundRecipes.map((recipe) => (
           <div key={recipe.id} className={styles['manage-box']}>
-            <p className={styles['dish-name']}>{recipe.dish_name}</p>
-            <p style={{ fontSize: '17px' }}>Preparation Time:</p>
-            <p>{recipe.preparation_time}</p>
+            <h1>{recipe.dish_name}</h1>
+            <span>Preparation Time:</span>
+            <span>&nbsp;{recipe.preparation_time}</span>
 
-            <p style={{ fontSize: '17px' }}>Ingredients:</p>
-            <p>{recipe.ingredients}</p>
+            <p>Ingredients:</p>
+            <span>{recipe.ingredients}</span>
 
             <div className={styles['button-container']}>
-              <Link
-                to={`/SavedRecipeCard/${recipe.id}`}
-                className={styles['view-button']}
-                state={recipe}
-              >
-                Detail
+              <Link to={`/SavedRecipeCard/${recipe.id}`} state={recipe}>
+                <button className={styles.button}>View</button>
               </Link>
               <button
                 onClick={() => handleDelete(recipe.id)}
-                className={styles['delete-button']}
+                className={styles.button}
               >
                 Delete
               </button>

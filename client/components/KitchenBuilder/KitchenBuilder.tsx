@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getAllIngredients } from '../../apis/ingredients'
 import { Ingredient, IngredientData } from '../../../models/ingredients'
 import { useIngredient } from '../../hooks/useIngredient'
+import Loader from '../Loading/Loading'
 
 import styles from './KitchenBuilder.module.css'
 import ErrorMessage from '../Error/ErrorMessage'
@@ -77,7 +78,7 @@ approach. - jayde */
   }
 
   if (isLoading) {
-    return <p>Loading...</p>
+    return <Loader />
   }
 
   if (isError) {

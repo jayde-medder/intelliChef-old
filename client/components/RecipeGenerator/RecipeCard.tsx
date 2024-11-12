@@ -36,7 +36,7 @@ const RecipeCard = () => {
         },
       })
     } catch (error) {
-      const message = `Sorry, We can't save your recipe`
+      const message = `An error occurred while saving your recipe`
       return (
         <>
           <ErrorMessage message={message} />

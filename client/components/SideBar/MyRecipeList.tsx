@@ -5,6 +5,7 @@ import { ChefIcon } from '../Icons'
 import ErrorMessage from '../Error/ErrorMessage.tsx'
 
 import styles from './SideBar.module.css'
+import Loader from '../Loading/Loading.tsx'
 
 interface UserProps {
   authId: string
@@ -30,7 +31,7 @@ const MyRecipeList: React.FC<UserProps> = ({ authId }) => {
   }
 
   if (!foundRecipes || isLoading) {
-    return <p>...loading</p>
+    return <Loader />
   }
 
   return (

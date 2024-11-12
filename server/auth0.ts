@@ -4,8 +4,8 @@ import { ParamsDictionary } from 'express-serve-static-core'
 import { JwtPayload } from 'jsonwebtoken'
 import jwks from 'jwks-rsa'
 
-const domain = 'intelli-chef.au.auth0.com'
-const audience = 'https://Intelli-chef/api'
+const domain = 'pikopiko-jayde.au.auth0.com'
+const audience = 'https://intellichef/api'
 
 const checkJwt = jwt({
   secret: jwks.expressJwtSecret({

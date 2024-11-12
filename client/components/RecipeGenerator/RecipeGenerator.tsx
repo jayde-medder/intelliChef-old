@@ -5,6 +5,7 @@ import { getAllIngredients } from '../../apis/ingredients'
 import styles from './RecipeGenerator.module.css'
 import { Recipes } from '../../../models/recipes'
 import ErrorMessage from '../Error/ErrorMessage'
+import Loader from '../Loading/Loading'
 
 function RecipeGenerator() {
   //state of recipeList is passed to/from RecipeCard to provide go-back functionality
@@ -113,7 +114,7 @@ function RecipeGenerator() {
               kitchen to continue.
             </p>
           ) : isSearching ? (
-            <p>Loading recipes...</p>
+            <Loader />
           ) : recipeList?.length ? (
             recipeList.map((recipe) => (
               <li key={recipe.dish_name}>

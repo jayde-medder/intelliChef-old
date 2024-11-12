@@ -19,7 +19,12 @@ const SavedRecipeCard = () => {
       <RecipeViewer recipe={state} />
       <div className={styles['recipe-nav']}>
         <div className={styles['button-container']}>
-          <button onClick={() => handleDelete(state.id)}>Delete</button>
+          <button
+            className={styles['button']}
+            onClick={() => handleDelete(state.id)}
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
